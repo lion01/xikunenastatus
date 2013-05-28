@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>Xi Kunena Status</name>
+    <version>0.0.1</version>
+    <creationDate>Jan 2010</creationDate>
+    <author>Team Joomlaxi</author>
+    <authorEmail>team@readybytes.in</authorEmail>
+    <authorUrl>http://www.joomlaxi.com</authorUrl>
+    <copyright>2009-11 Ready Bytes Software Labs Pvt. Ltd.</copyright>
+    <license>GNU General Public License v2</license>
+    <description>PayPlans : Paid Membership and Subscription System for Joomla</description>
+	<files>
+		<filename plugin="xikunenastatus">xikunenastatus.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+		
+	  	 <field name="waitingTime" type="list" default="3" label="Set alert timing for waiting forum (mail to owners)(In days)" description="Set the time to wait before sending the alert emails to owners of forum">
+	  	 	<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+	  	 </field>
+	  	 <field name="closingTime" type="list" default="7" label="Set closed timing for answered forums(mail to mail to owner)(In days)" description="Set the time to wait before closing the forum">
+	  	 	<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+	  	 </field>
+	  	 <field name="moderatorTime" type="list" default="1" label="Set alert timing for working fourm (mail to moderators)(In days)" description="Set the time to wait before sending the alert emails to moderators">
+	  	 	<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+	  	 </field>
+	  	 <field name="reminderTime" type="list" default="30" label="Set reminder timing for roadmap (mail to moderators)(In days)" description="Set the time to wait before sending the alert emails to moderators on forum status roadmap">
+	  	 	<option value="15">15</option>
+			<option value="30">30</option>
+			<option value="60">60</option>
+			<option value="90">90</option>
+	  	 </field>
+	  	 <field name="enableEmail" type="radio" default="0" label="Enable Emailing" description="Set whether email should be sent or not">
+	  	 	<option value="0">No</option>
+			<option value="1">Yes</option>
+		</field>
+		 <field name="forum_title" type="text" default="JoomlaXi Forum" label="Forum Title" description="Title of forum that will be set as mail subject"></field>
+		 <field name="forum_email" type="text" default="payplans@readybytes.in" label="Forum Email" description="Email address that will be used while sending mails"></field>
+		 <field name="forum_limit" type="text" default="5" label="Forum's Queue Limit" description="Enter no. of forums to be processed in one slot"></field>
+	  	 <field name="cron_key" type="text" default="AB45Z" label="Cron Key" description="Set key to be used for running cron"></field>
+	  	 <field name="moderator_Email" type="text" default="team@readybytes.in" label="Moderator's Email" description="Enter moderator's emailId on which alert email will be sent on open/new status"></field>
+	  	 <field name="waiting_Msg" type="text"  default="waiting.php" label="Filename for waiting status" description="write the filename that contains the mail message to be sent to owner on waiting status"></field>
+	  	 <field name="answered_Msg" type="text" default="answered.php" label="Filename for answered status" description="write the filename that contains the mail message to be sent to owner on answered status"></field>
+	  	 <field name="open_Msg" type="text" default="open.php" label="Filename for open status" description="write the filename that contains the mail message to be sent to moderators on open status"></field>
+	  	 <field name="roadmap_Msg" type="text" default="roadmap.php" label="Filename for roadmap status" description="write the filename that contains the mail message to be sent to moderators on roadmap status"></field>
+	     <field name="sync_Up" type="syncUp" default="0" label="Sync Up Forums" description="Sync Up Forums" />	
+	
+	  </fieldset>
+	  </fields>
+	  </config>
+</extension>
+

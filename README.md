@@ -1,4 +1,4 @@
 xikunenastatus
 ==============
 
-JoomlaXi Kunena Status
+JoomlaXi Kunena Status Changer
